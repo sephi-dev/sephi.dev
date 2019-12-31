@@ -1,6 +1,6 @@
 {
   "files": [
-    "custom.d.ts"
+    "./types/custom.d.ts"
   ],
   "compilerOptions": {
     "target": "es5",

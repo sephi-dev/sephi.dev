@@ -1,8 +1,8 @@
 import React from "react";
 import App from "next/app";
 import { ThemeProvider } from "styled-components";
-import { theme } from "../glossy/theme.main";
-import NormalizeCSS from "../glossy/normalize";
+import { theme } from "@glossy/theme.main";
+import NormalizeCSS from "@glossy/normalize";
 
 class MyApp extends App {
   render() {

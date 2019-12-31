@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "lint": "eslint './src/**/*.{ts,tsx}' --max-warnings 10",
     "stories": "start-storybook -p 6006 -c .storybook"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   },
   "dependencies": {
     "@types/styled-components": "^4.1.22",

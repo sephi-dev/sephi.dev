@@ -5,12 +5,12 @@ import { postReducer } from "./reducer";
 
 function useGetPosts() {
   const dispatch = useDispatch();
-  return () => dispatch(Events.getPosts);
+  return () => dispatch(Events.getPosts());
 }
 
 export const Post = {
   getAll: useGetPosts,
-  sagas,
   reducer: postReducer,
-  actions: Actions
+  actions: Actions,
+  sagas
 };

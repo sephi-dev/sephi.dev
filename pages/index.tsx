@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Head from "next/head";
 import { Post as PostModel } from "@models/post";
 import { getPosts } from "@core/api";
 import PostList from "@components/posts";
+import { NextPage } from "next/types";
 
 interface Props {
   posts: PostModel[];

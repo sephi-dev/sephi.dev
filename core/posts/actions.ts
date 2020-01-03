@@ -2,7 +2,7 @@ import { createAction } from "typesafe-actions";
 import { Post } from "@models/post";
 
 export const Events = {
-  getPosts: createAction("posts/get")<undefined>()
+  getPosts: createAction("posts/get")<void>()
 };
 
 export const Actions = {

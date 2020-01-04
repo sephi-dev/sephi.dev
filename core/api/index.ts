@@ -1,4 +1,4 @@
-import GhostContentAPI from "@tryghost/content-api";
+import GhostContentAPI, { GhostData } from "@tryghost/content-api";
 
 const api = GhostContentAPI({
   url: "https://api.sephi.dev",
@@ -10,6 +10,17 @@ export async function getPosts(limit: number | string = "all") {
   return await api.posts
     .browse({
       limit
+    })
+    .catch(err => {
+      console.error(err);
+    });
+}
+
+export async function getPostBySlug(postSlug: string, id: string) {
+  return await api.posts
+    .read({
+      slug: postSlug,
+      id
     })
     .catch(err => {
       console.error(err);

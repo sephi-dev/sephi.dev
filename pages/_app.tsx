@@ -16,7 +16,7 @@ interface Props {
 class MyApp extends App<Props> {
   static async getInitialProps({ Component, ctx }: AppContext) {
     let pageProps = {};
-
+    // will wait for the store.
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx);
     }

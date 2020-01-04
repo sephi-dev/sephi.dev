@@ -1,6 +1,6 @@
-import { call, put, takeEvery } from "redux-saga/effects";
+import { call, put, takeLatest } from "redux-saga/effects";
 import { Actions, Events } from "./actions";
-import { getPosts } from "@core/api";
+import { getPosts, getPostBySlug } from "@core/api";
 
 function* fetchPosts() {
   try {
@@ -12,8 +12,18 @@ function* fetchPosts() {
   }
 }
 
+function* fetchPostBySlug(postSlug: string, id: string) {
+  try {
+    const post = yield call(() => getPostBySlug(postSlug as string, id));
+    yield put(Actions.setPost(post));
+  } catch (e) {
+    console.error(e);
+  }
+}
+
 // all posts sagas in one place
 // Dispatching an event will fire an Action.
 export function* sagas(): Generator {
-  yield takeEvery(Events.getPosts, fetchPosts);
+  yield takeLatest(Events.getPosts, fetchPosts);
+  yield takeLatest(Events.getPostBySlug, () => fetchPostBySlug);
 }

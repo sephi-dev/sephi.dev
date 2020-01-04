@@ -10,6 +10,11 @@ function useGetPosts() {
   return dispatch(Events.getPosts());
 }
 
+function useGetPostBySlug() {
+  const dispatch = useDispatch();
+  return dispatch(Events.getPostBySlug);
+}
+
 function usePostsSelector() {
   return useSelector(postsItem);
 }

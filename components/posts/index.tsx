@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from "react";
+import Link from "next/link";
 import { map } from "lodash";
 import { Post as PostModel } from "@models/post";
 import PostItem from "./post";
@@ -13,7 +14,11 @@ const Component: FunctionComponent<Props> = ({ posts }: Props) => {
   return (
     <div>
       {map(posts, post => (
-        <PostItem key={post.id} post={post} />
+        <Link key={post.id} href="/p/[slug]" as={`/p/${post.slug}`}>
+          <a>
+            <PostItem post={post} />
+          </a>
+        </Link>
       ))}
     </div>
   );

@@ -3,7 +3,6 @@ import Head from "next/head";
 import { Post as PostModel } from "@models/post";
 import { getPosts } from "@core/api";
 import PostList from "@components/posts";
-import { NextPage } from "next/types";
 
 interface Props {
   posts: PostModel[];

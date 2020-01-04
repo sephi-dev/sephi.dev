@@ -5,8 +5,9 @@ import { postReducer } from "./reducer";
 import { postsItem } from "./selectors";
 
 function useGetPosts() {
+  // Dispatch the event will get the posts.
   const dispatch = useDispatch();
-  return () => dispatch(Events.getPosts());
+  return dispatch(Events.getPosts());
 }
 
 function usePostsSelector() {

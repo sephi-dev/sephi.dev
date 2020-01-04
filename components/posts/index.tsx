@@ -2,15 +2,14 @@ import React, { FunctionComponent } from "react";
 import { map } from "lodash";
 import { Post as PostModel } from "@models/post";
 import PostItem from "./post";
-import { Post } from "@core/posts";
+// import { Post } from "@core/posts";
 
 interface Props {
   posts?: PostModel[];
 }
 
 const Component: FunctionComponent<Props> = ({ posts }: Props) => {
-  const newPosts = Post.getAll();
-  console.log(newPosts);
+  // const newPosts = Post.getAll();
   return (
     <div>
       {map(posts, post => (

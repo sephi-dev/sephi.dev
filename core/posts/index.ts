@@ -7,12 +7,12 @@ import { postsItem } from "./selectors";
 function useGetPosts() {
   // Dispatch the event will get the posts.
   const dispatch = useDispatch();
-  return dispatch(Events.getPosts());
+  return () => dispatch(Events.getPosts());
 }
 
 function useGetPostBySlug() {
   const dispatch = useDispatch();
-  return dispatch(Events.getPostBySlug);
+  return () => dispatch(Events.getPostBySlug);
 }
 
 function usePostsSelector() {

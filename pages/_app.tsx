@@ -9,6 +9,7 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "@glossy/theme.main";
 import NormalizeCSS from "@glossy/normalize";
 import configureStore from "../store";
+import FontFace from "@glossy/fonts";
 
 interface Props {
   store: Store;
@@ -30,6 +31,7 @@ class MyApp extends App<Props> {
         <ThemeProvider theme={theme}>
           <>
             <Component {...pageProps} />
+            <FontFace />
             <NormalizeCSS />
           </>
         </ThemeProvider>

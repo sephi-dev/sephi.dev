@@ -7,7 +7,7 @@ const NormalizeCSS = createGlobalStyle`
     font-size: 62.5%; /*for using REM units*/
   }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'SF UI', BlinkMacSystemFont, 'Roboto', 'Oxygen', 'Ubuntu', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.3;

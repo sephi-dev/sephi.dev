@@ -16,6 +16,7 @@ function* fetchPosts(): SagaIterator {
 
 function* fetchPostBySlug(action: BaseAction): SagaIterator {
   try {
+    // call use the first arg as the function and the next ones as the args for the function.
     const post = yield call(
       getPostBySlug,
       action.payload.postSlug as string,

@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from "react";
+import styled from "styled-components";
 import Link from "next/link";
 import { map } from "lodash";
 import { Post as PostModel } from "@models/post";
@@ -9,15 +10,20 @@ interface Props {
   posts?: PostModel[];
 }
 
+const StyledLink = styled.a`
+  color: black;
+  cursor: pointer;
+`;
+
 const Component: FunctionComponent<Props> = ({ posts }: Props) => {
   // const newPosts = Post.getAll();
   return (
     <div>
       {map(posts, post => (
         <Link key={post.id} href="/p/[slug]" as={`/p/${post.slug}`}>
-          <a>
+          <StyledLink>
             <PostItem post={post} />
-          </a>
+          </StyledLink>
         </Link>
       ))}
     </div>

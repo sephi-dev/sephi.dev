@@ -1,0 +1,22 @@
+  
+{
+  "name": "sephi.dev",
+  "short_name": "sephi.dev",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "background_color": "#FFFFFF",
+  "description": "Blog for juniors and students",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#fff"
+}

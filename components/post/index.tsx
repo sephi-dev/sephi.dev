@@ -5,6 +5,11 @@ interface Props {
   data: PostModel;
 }
 
-const Component = ({ data }: Props) => <div>{data.title}</div>;
+const Component = ({ data }: Props) => (
+  <div>
+    <h2>{data.title}</h2>
+    <p>{data.excerpt}</p>
+  </div>
+);
 
 export default Component;

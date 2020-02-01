@@ -7,6 +7,7 @@ import Document, {
   NextScript
 } from "next/document";
 import { ServerStyleSheet } from "styled-components";
+import Header from "@components/header";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -36,8 +37,17 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="fr">
-        <Head />
+        <Head>
+          <title>Offline Next.js with Now 2.0</title>
+          <link rel="manifest" href="/manifest.json" />
+          <meta name="theme-color" content="#fff" />
+          <meta
+            name="description"
+            content="blog for dev juniors and students"
+          />
+        </Head>
         <body>
+          <Header />
           <Main />
           <NextScript />
         </body>

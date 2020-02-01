@@ -38,7 +38,6 @@ class MyDocument extends Document {
     return (
       <Html lang="fr">
         <Head>
-          <title>Offline Next.js with Now 2.0</title>
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content="#fff" />
           <meta

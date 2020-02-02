@@ -29,7 +29,7 @@ const Img = styled.img`
 // add link
 const About: FunctionComponent = () => (
   <Container>
-    <Img src="/logo.svg" />
+    <Img src="/logo.svg" alt="logo sephi" title="C'est de moi qu'on parle" />
     <Text>
       Je m&apos;appelle David, Développeur Front, ex-intervenant à @Hetic &
       @EEMI en intégration, JavaScript et React. Aujourd&apos;hui je vis de ma

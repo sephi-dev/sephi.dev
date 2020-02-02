@@ -25,6 +25,9 @@ const NormalizeCSS = createGlobalStyle`
   img {
     width: 100%;
     height: auto;
+    &:not([alt]) {
+      border: 2px solid red;
+    }
   }
 `;
 

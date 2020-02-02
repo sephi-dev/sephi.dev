@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
+import Socials from "@components/socials";
 
 const Header = styled.header`
   display: flex;
   align-items: center;
   padding: 2rem 1.4rem;
+  position: relative;
 `;
 
 const Logo = styled.div`
@@ -33,6 +35,7 @@ const Component = () => {
         </Link>
       </Logo>
       <Title>sephi.dev</Title>
+      <Socials />
     </Header>
   );
 };

@@ -19,10 +19,18 @@ const Link = styled.a`
 const Component: FunctionComponent = () => (
   <Container>
     <Link href="https://github.com/davidvenin" target="_blank">
-      <SocialGithubCircular size={34} />
+      <SocialGithubCircular
+        size={34}
+        title="contactez-moi sur Github"
+        crossOrigin={true}
+      />
     </Link>
     <Link href="https://twitter.com/sephiics" target="_blank">
-      <SocialTwitterCircular size={34} />
+      <SocialTwitterCircular
+        size={34}
+        title="Suivez-moi sur Twitter"
+        crossOrigin={true}
+      />
     </Link>
   </Container>
 );

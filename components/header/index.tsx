@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import Link from "next/link";
 
 const Header = styled.header`
   display: flex;
   align-items: center;
+  padding: 2rem 1.4rem;
 `;
 
 const Logo = styled.div`
@@ -24,7 +26,11 @@ const Component = () => {
   return (
     <Header>
       <Logo>
-        <Img src="/logo.svg" alt="Logo sephi.dev" title="sephi.dev" />
+        <Link href="/">
+          <a>
+            <Img src="/logo.svg" alt="Logo sephi.dev" title="sephi.dev" />
+          </a>
+        </Link>
       </Logo>
       <Title>sephi.dev</Title>
     </Header>

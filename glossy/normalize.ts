@@ -21,6 +21,11 @@ const NormalizeCSS = createGlobalStyle`
   input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none; margin: 0;
   }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 export default NormalizeCSS;

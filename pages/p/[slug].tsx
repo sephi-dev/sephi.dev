@@ -2,17 +2,14 @@ import React from "react";
 import { NextPageContext } from "next";
 import { getPostBySlug } from "@core/api";
 import { Post as PostModel } from "@models/post";
+import PostView from "@components/post";
 
 interface Props {
   post: PostModel;
 }
 
 const Post = ({ post }: Props) => {
-  return (
-    <div>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
-    </div>
-  );
+  return <PostView data={post} />;
 };
 
 Post.getInitialProps = async (context: NextPageContext) => {

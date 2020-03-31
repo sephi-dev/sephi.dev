@@ -24,7 +24,7 @@
     "framer-motion": "^1.8.3",
     "immer": "^5.1.0",
     "lodash": "^4.17.15",
-    "next": "^9.1.7-canary.11",
+    "next": "^9.3.2",
     "next-fonts": "^1.0.3",
     "next-offline": "^5.0.0",
     "next-redux-saga": "^4.1.2",
